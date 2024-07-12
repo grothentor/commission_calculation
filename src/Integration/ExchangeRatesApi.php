@@ -6,8 +6,8 @@ use Curl\Curl;
 
 class ExchangeRatesApi implements RatesProviderInterface
 {
-    private $url = null;
-    private $apiKey = null;
+    private $url;
+    private $apiKey ;
 
     public function __construct()
     {

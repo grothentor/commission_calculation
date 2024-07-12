@@ -16,7 +16,7 @@
 - Run the main script:
   `php app.php input.txt`
 - Run tests:
-  `./vendor/bin/phpunit tests`
+  `./vendor/bin/phpunit tests --testdox`
 
 ### To run with Docker:
 - Install composer dependencies: <br />
@@ -28,6 +28,7 @@
 - Might be useful to make aliases: <br />
   - `alias php-commission='docker run -it --rm --name commission_calculation -v "$PWD":/usr/src/commission_calculation -w /usr/src/commission_calculation php:8.3-cli php '` <br />
   Then you can run commands like: `php-commission app.php input.txt` <br /> <br />
-  - `alias phpunit-commission='docker run -it --rm --name commission_calculation -v "$PWD":/usr/src/commission_calculation -w /usr/src/commission_calculation php:8.3-
-    cli ./vendor/bin/phpunit '` <br />
+  - `alias phpunit-commission='docker run -it --rm --name commission_calculation -v "$PWD":/usr/src/commission_calculation -w /usr/src/commission_calculation php:8.3-cli ./vendor/bin/phpunit '` <br />
     Then you can run commands like: `phpunit-commission tests`
+- Cleanup: <br />
+  - `docker rmi -f php:8.3-cli && docker rmi -f composer/composer && unalias php-commission phpunit-commission`

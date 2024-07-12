@@ -5,7 +5,7 @@ use PHPUnit\Framework\TestCase;
 
 class TransactionServiceTest extends TestCase
 {
-    private $fileName = 'tests/test_transactions.txt';
+    private string $fileName = 'tests/test_transactions.txt';
 
     public function testTransactionsParsing()
     {

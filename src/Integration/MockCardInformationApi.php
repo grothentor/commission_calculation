@@ -34,6 +34,4 @@ class MockCardInformationApi implements CardInformationProviderInterface
 
         return $cardInformation;
     }
-
-
 }

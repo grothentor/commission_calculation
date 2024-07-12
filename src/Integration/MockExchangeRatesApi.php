@@ -2,8 +2,6 @@
 
 namespace App\Integration;
 
-use Curl\Curl;
-
 class MockExchangeRatesApi implements RatesProviderInterface
 {
     public function getRates(): array

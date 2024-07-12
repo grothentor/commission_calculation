@@ -5,9 +5,33 @@ namespace App\Service;
 class CountryCodeService
 {
     private const array EU_COUNTRIES_CODES = [
-        'AT', 'BE', 'BG', 'CY', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI',
-        'FR', 'GR', 'HR', 'HU', 'IE', 'IT', 'LT', 'LU', 'LV', 'MT',
-        'NL', 'PO', 'PT', 'RO', 'SE', 'SI', 'SK',
+        'AT',
+        'BE',
+        'BG',
+        'CY',
+        'CZ',
+        'DE',
+        'DK',
+        'EE',
+        'ES',
+        'FI',
+        'FR',
+        'GR',
+        'HR',
+        'HU',
+        'IE',
+        'IT',
+        'LT',
+        'LU',
+        'LV',
+        'MT',
+        'NL',
+        'PO',
+        'PT',
+        'RO',
+        'SE',
+        'SI',
+        'SK',
     ];
 
     public function isEUCode(?string $alfa2Code): bool

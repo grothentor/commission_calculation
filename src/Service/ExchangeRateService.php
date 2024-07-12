@@ -3,7 +3,6 @@
 namespace App\Service;
 
 use App\Facade\ProviderFacade;
-use App\Integration\ExchangeRatesApi;
 use App\Integration\RatesProviderInterface;
 
 class ExchangeRateService
