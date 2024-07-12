@@ -23,7 +23,11 @@ class MockCardInformationApi implements CardInformationProviderInterface
             '4745030' => 'LT',
         ];
 
-        $alfa2Code = $predefined[$bankIdentificationNumber] ?? $this->countryCodeService->getRandomCountryCode();
+        $alfa2Code = $predefined[$bankIdentificationNumber] ?? null;
+
+        if ($alfa2Code === null && strlen($bankIdentificationNumber) > 5 && strlen($bankIdentificationNumber) < 9) {
+            $alfa2Code = $this->countryCodeService->getRandomCountryCode();
+        }
 
         $cardInformation = new CardInformation();
         $cardInformation->setCountryAlfa2Code($alfa2Code);

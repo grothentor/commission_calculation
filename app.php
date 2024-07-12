@@ -1,14 +1,9 @@
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
+require 'autoload.php';
 
-use Symfony\Component\Dotenv\Dotenv;
 use App\Service\TransactionService;
 use App\Service\CommissionService;
-
-$dotenv = new Dotenv();
-$dotenv->usePutenv();
-$dotenv->load(__DIR__ . '/.env');
 
 $transactionService = new TransactionService();
 $commissionService = new CommissionService();
